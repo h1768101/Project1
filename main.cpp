@@ -20,7 +20,7 @@ int main(int argc, char** argv)
     cout << Event[0].result << endl;
     ssh_disconnect(session);
     ssh_free(session);
-    cout << "vaule1" << endl;
+    cout << "vaule2" << endl;
     return 0;
 }
 
