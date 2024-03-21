@@ -1,0 +1,9 @@
+hostname 
+uname -m
+lscpu | grep "Model name" | awk -F': ' '{print $2}' | sed 's/^ *//'
+lscpu | grep "Socket(s)" | awk '{print $2}'
+lscpu | grep "Core(s) per socket" | awk '{print $4}'
+free -h | grep "Mem" | awk '{print $2}'
+sudo dmidecode -t system | grep "Product Name" | awk -F': ' '{print $2}'
+cat /etc/redhat-release
+ping -c 1 www.baidu.com &> /dev/null && echo "true" || echo "false"
